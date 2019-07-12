@@ -30,7 +30,7 @@
 
       $sql = "select * from users where username='$username' AND password='$password'";
       $eksekusi = mysqli_query($conn,$sql);
-
+      // echo $sql;
       foreach ($eksekusi as $data) {
         $_SESSION['status'] = 1;
         $status = 1;
@@ -60,7 +60,6 @@
     $status = 'eror';
     array_push($_SESSION['pesan'],[$status,'Link Tidak ditemukan']);
   }
-
   header('location:'.$link);
   // echo "status = ".$status."<br>Pesan = ".implode(" | ",$pesan);
   // return ['status'=>$status,'pesan'=>$pesan];

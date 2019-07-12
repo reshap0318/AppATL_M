@@ -5,7 +5,7 @@
 	$user = "root";
 	$pass = "";
 	// $port = "5432";
-	$dbname = "tb_625";
+	$dbname = "tb_pbd_icha";
 
 	// $conn = pg_connect("host=".$host." port=".$port." dbname=".$dbname." user=".$user." password=".$pass) or die("Gagal");
 	$conn = mysqli_connect("$host","$user","$pass","$dbname");

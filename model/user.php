@@ -41,11 +41,11 @@
         }
     }
 
-    function update($last_username,$username, $password = null, $nama = null, $hak_akses = null){
+    function update($last_username,$username, $password = null, $nama = null,$hak_akses = null){
 
         $data = mysqli_fetch_assoc($this->data($last_username));
 
-        $sql = "update users SET username='$username' ";
+        $sql = "update users SET username='$last_username' ";
 
         if($nama != null){
             $sql .= ",nama='$nama' ";
